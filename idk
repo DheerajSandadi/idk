@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<code>
+  <class name="AppDb">
+    <field name="_connection" type="ConnectionType" visibility="private"/>
+  </class>
+
+  <class name="Product">
+    <field name="_id" type="int" visibility="private"/>
+    <field name="_title" type="string" visibility="private"/>
+    <field name="_price" type="double" visibility="private"/>
+    <field name="_quantity" type="int" visibility="private"/>
+  </class>
+
+  <class name="ProductsController" extends="Controller">
+    <field name="_db" type="AppDb" visibility="private"/>
+    
+    <constructor>
+      <parameter name="db" type="AppDb"/>
+    </constructor>
+
+    <method name="GetProducts" returnType="Task<IActionResult>">
+      <!-- Method Implementation Here -->
+    </method>
+
+    <method name="GetProductById" returnType="Task<IActionResult>">
+      <parameter name="id" type="string"/>
+      <!-- Method Implementation Here -->
+    </method>
+
+    <method name="UpdateProductById" returnType="Task<IActionResult>">
+      <parameter name="product" type="Product"/>
+      <!-- Method Implementation Here -->
+    </method>
+
+    <method name="DeleteProductById" returnType="Task<IActionResult>">
+      <parameter name="id" type="string"/>
+      <!-- Method Implementation Here -->
+    </method>
+
+    <method name="CreateProduct" returnType="Task<IActionResult>">
+      <parameter name="product" type="Product"/>
+      <!-- Method Implementation Here -->
+    </method>
+  </class>
+</code>
+
